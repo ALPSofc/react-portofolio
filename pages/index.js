@@ -8,6 +8,7 @@ import {
   AiFillLinkedin,
   AiFillInstagram,
 } from "react-icons/ai";
+import { HiMenu, HiX } from "react-icons/hi";
 import Image from "next/legacy/image";
 import devalps from "../public/dev-alps.png";
 import code from "../public/code.png";
@@ -21,6 +22,8 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const { t, locale, setLocale } = useTranslation();
 
+  const [isOpen, setIsOpen] = useState(false); // controle menu mobile
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -29,12 +32,25 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
+      <main className="bg-white px-6 md:px-20 lg:px-40 dark:bg-gray-900">
         {/* HEADER */}
         <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between items-center">
-            <h1 className="text-xl font-burtons dark:text-white">developedalps</h1>
-            <ul className="flex items-center gap-4">
+          <nav className="py-6 mb-12 flex justify-between items-center">
+            {/* LOGO */}
+            <h1 className="text-xl font-burtons dark:text-white">
+              developedalps
+            </h1>
+
+            {/* BOTÃO HAMBURGUER (mobile) */}
+            <button
+              className="md:hidden text-3xl dark:text-white"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <HiX /> : <HiMenu />}
+            </button>
+
+            {/* MENU DESKTOP */}
+            <ul className="hidden md:flex items-center gap-4">
               <li>
                 <BsFillMoonStarsFill
                   onClick={() => setDarkMode(!darkMode)}
@@ -51,9 +67,7 @@ export default function Home() {
                   {t("resume")}
                 </a>
               </li>
-
               <li>
-                {/* Language Switcher */}
                 <button
                   onClick={() => setLocale(locale === "en" ? "pt" : "en")}
                   className="px-3 py-1 border rounded-md dark:text-white"
@@ -63,6 +77,30 @@ export default function Home() {
               </li>
             </ul>
           </nav>
+
+          {/* MENU MOBILE DROPDOWN */}
+          {isOpen && (
+            <div className="md:hidden flex flex-col items-center gap-6 py-6 bg-gray-100 dark:bg-gray-800 rounded-xl shadow-lg mb-6">
+              <BsFillMoonStarsFill
+                onClick={() => setDarkMode(!darkMode)}
+                className="cursor-pointer text-2xl dark:text-white"
+              />
+              <a
+                className="bg-gradient-to-r from-violet-900 to-cyan-700 text-white px-4 py-2 rounded-md"
+                href={locale === "en" ? "/cv-en.pdf" : "/cv-pt.pdf"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("resume")}
+              </a>
+              <button
+                onClick={() => setLocale(locale === "en" ? "pt" : "en")}
+                className="px-3 py-1 border rounded-md dark:text-white"
+              >
+                {locale === "en" ? "🇧🇷 PT" : "🇺🇸 EN"}
+              </button>
+            </div>
+          )}
 
           {/* INTRO */}
           <div className="text-center p-10">
@@ -115,13 +153,17 @@ export default function Home() {
         {/* SERVICES */}
         <section>
           <div>
-            <h3 className="text-3xl py-1 dark:text-white">{t("servicesTitle")}</h3>
+            <h3 className="text-3xl py-1 dark:text-white">
+              {t("servicesTitle")}
+            </h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
               {t("servicesText1")}{" "}
               <Tooltip
                 text={
                   <span
-                    dangerouslySetInnerHTML={{ __html: t("servicesTooltipText") }}
+                    dangerouslySetInnerHTML={{
+                      __html: t("servicesTooltipText"),
+                    }}
                   />
                 }
               >
@@ -177,7 +219,9 @@ export default function Home() {
                 alt="Code Skills"
                 className="mx-auto"
               />
-              <h3 className="text-lg font-medium pt-8 pb-2 text-violet-900">Code</h3>
+              <h3 className="text-lg font-medium pt-8 pb-2 text-violet-900">
+                Code
+              </h3>
               <div className="columns-2 gap-4 text-center">
                 {[
                   "JavaScript",
@@ -208,11 +252,16 @@ export default function Home() {
         {/* PROJECTS */}
         <section>
           <div>
-            <h3 className="text-3xl py-1 dark:text-white">{t("projects.title")}</h3>
-            <p className="text-gray-600 dark:text-white">{t("projects.coming")}</p>
+            <h3 className="text-3xl py-1 dark:text-white">
+              {t("projects.title")}
+            </h3>
+            <p className="text-gray-600 dark:text-white">
+              {t("projects.coming")}
+            </p>
           </div>
         </section>
       </main>
     </div>
   );
 }
+
