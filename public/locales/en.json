@@ -1,0 +1,25 @@
+{
+  "resume": "Resume",
+  "intro": {
+    "role": "Web Developer",
+    "description": "Freelancer providing services for programming and fiber optic technician needs. Join me down below and let's get cracking!"
+  },
+  "servicesTitle": "Services I Offer",
+  "servicesText1": "Since the beginning of my journey as both a developer and a fiber optic technician, I have contributed to projects for various companies. While I do not yet have formal professional experience in web development, I have successfully completed numerous projects as an",
+  "servicesTooltipLabel": "FTTH & FTTX",
+  "servicesTooltipText": "<strong>FTTH</strong> (Fiber To The Home) and <strong>FTTX</strong> are fiber optic technologies used to deliver high-speed internet directly to homes or nearby points.",
+  "servicesText2": "Technician. I have collaborated with skilled professionals to deliver solutions, building infrastructure and providing reliable connections for both businesses and end users.",
+  "servicesText3": "I offer a wide range of services, including programming and fiber optic installation, to helping you build your brand identity.",
+  "career": {
+    "title": "Career",
+    "text": "Telecommunications professional with 6 years of experience, having worked on numerous infrastructure projects, deployments, and end-customer support. Experienced in both hardware and software, and now seeking to transition into the front-end development field. Continuously expanding my knowledge, including proficiency in the English language, having lived in Australia for two years — an experience that strengthened not only my English skills but also my professional and cultural background."
+  },
+  "consulting": {
+    "title": "Quality of Service",
+    "text": "Delivering the best in technology and design, fully leveraging my skills and experience, while consistently providing quality and versatility to clients. With a strong commitment to responsibility, punctuality, and organization, I strive to deliver work with clarity and excellence."
+  },
+  "projects": {
+    "title": "Projects",
+    "coming": "Projects coming soon..."
+  }
+}

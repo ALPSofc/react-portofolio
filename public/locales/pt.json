@@ -1,0 +1,25 @@
+{
+  "resume": "Currículo",
+  "intro": {
+    "role": "Desenvolvedor Web",
+    "description": "Freelancer oferecendo serviços de programação e técnico em fibra óptica. Junte-se a mim abaixo e vamos começar!"
+  },
+  "servicesTitle": "Serviços que Ofereço",
+  "servicesText1": "Desde o início da minha jornada como desenvolvedor e técnico em fibra óptica, contribuí em projetos para várias empresas. Embora eu ainda não tenha experiência profissional formal em desenvolvimento web, concluí com sucesso diversos projetos como",
+  "servicesTooltipLabel": "FTTH & FTTX",
+  "servicesTooltipText": "<strong>FTTH</strong> (Fiber To The Home) e <strong>FTTX</strong> são tecnologias de fibra óptica usadas para fornecer internet de alta velocidade diretamente à residência ou ponto próximo.",
+  "servicesText2": "Técnico. Colaborei com profissionais qualificados para entregar soluções, construindo infraestrutura e fornecendo conexões confiáveis tanto para empresas quanto para usuários finais.",
+  "servicesText3": "Ofereço uma ampla gama de serviços, incluindo programação e instalação de fibra óptica, ajudando você a construir sua identidade de marca.",
+  "career": {
+    "title": "Carreira",
+    "text": "Profissional de telecomunicações com 6 anos de experiência, tendo atuado em diversos projetos de infraestrutura, implantações e suporte ao cliente final. Experiente em hardware e software, e atualmente buscando migrar para a área de desenvolvimento front-end. Venho ampliando meus conhecimentos, incluindo a proficiência na língua inglesa, adquirida durante os dois anos em que morei na Austrália — experiência que fortaleceu não apenas meu inglês, mas também minha bagagem profissional e cultural."
+  },
+  "consulting": {
+    "title": "Qualidade de Serviço",
+    "text": "Entregar o melhor em tecnologia e design, aproveitando ao máximo minhas habilidades e experiência, sempre oferecendo qualidade e versatilidade aos clientes. Com forte compromisso com responsabilidade, pontualidade e organização, busco realizar meu trabalho com clareza e excelência."
+  },
+  "projects": {
+    "title": "Projetos",
+    "coming": "Projetos em breve..."
+  }
+}
